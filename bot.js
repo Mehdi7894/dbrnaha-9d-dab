@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = 'G.';
+const prefix = '$';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'-help','Type -help',`${client.users.size} Members`,'#DS..','By: #DS.. Server'];
+    var setGame = [`${client.guilds.size} Server`,'$help','Type $help',`${client.users.size} Members`,'XHERO SYSTEM','By: XHERO.. Server'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -129,17 +129,6 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『${prefix}deletecolors <number> / لحذف الالوان』
 **
    `,`
-        ***__Music orders__***
-**
-『${prefix}play / لتشغيل أغنية برآبط أو بأسم』
-『${prefix}skip / لتجآوز الأغنية الحآلية』
-『${prefix}pause / إيقآف الأغنية مؤقتا』
-『${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
-『${prefix}vol / لتغيير درجة الصوت 100 - 0』
-『${prefix}stop / لإخرآج البوت من الروم』
-『${prefix}np / لمعرفة الأغنية المشغلة حآليا』
-『${prefix}queue / لمعرفة قآئمة التشغيل』
-**
         ***__Games orders__***
  **       
 『${prefix}rps / حجر ورقة مقص』
